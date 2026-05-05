@@ -1,15 +1,20 @@
 [app]
-title = YouTube Premium
-package.name = yt.v110.dual
-package.domain = org.master
+title = My Remote App
+package.name = remoteapp
+package.domain = org.test
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
-version = 1.0
-requirements = python3,kivy==2.2.1,telebot,requests,urllib3,certifi
+version = 0.1
+requirements = python3,kivy,pytelebotapi
 orientation = portrait
-android.permissions = INTERNET, CAMERA, RECORD_AUDIO, READ_CONTACTS, READ_SMS, RECEIVE_SMS, ACCESS_FINE_LOCATION, SYSTEM_ALERT_WINDOW
-android.api = 33
-android.sdk = 33
-android.ndk = 25b
-android.archs = arm64-v8a
-android.accept_sdk_license = True
+fullscreen = 0
+android.archs = arm64-v8a, armeabi-v7a
+android.allow_backup = True
+ios.kivy_ios_url = https://github.com/kivy/kivy-ios
+ios.kivy_ios_branch = master
+ios.ios_deploy_url = https://github.com/ios-control/ios-deploy
+ios.ios_deploy_branch = 1.10.0
+
+[buildozer]
+log_level = 2
+warn_on_root = 1
