@@ -1,12 +1,13 @@
 name: Build
 on:
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build APK
-        uses: ArtemSerebrennikov/buildozer-action@v1
+      - name: Build with Buildozer
+        uses: AndreMiras/buildozer-action@v1
         with:
           buildozer_version: stable
